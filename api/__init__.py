@@ -25,7 +25,12 @@ if SENTRY_DSN is not None:
 BP_VERSION = "2.2"
 
 DATA_DIR = os.getenv("DATA_DIR", "./public/data")
-CONFIG_DIR = "./src/config"
+CONFIG_DIR = os.getenv('CONFIG_DIR', "./src/config")
+
+print('Data directory: {}'.format(DATA_DIR))
+print('Config JSON directory: {}'.format(CONFIG_DIR))
+
+
 CONFIG = {}
 try:
     for entry in (
@@ -39,7 +44,9 @@ try:
     ):
         with open("{0}/{1}.json".format(CONFIG_DIR, entry)) as infile:
             CONFIG[entry] = json.loads(infile.read())
-except:
+except Exception as e:
+    print("Error loading config JSON files")
+    print(e)
     sentry.captureException()
 
 

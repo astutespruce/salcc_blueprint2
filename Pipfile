@@ -4,20 +4,20 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "*"
-pandas = "*"
-geopandas = "*"
-fiona = "*"
 python-docx = "*"
-pytest = "*"
 flask = "*"
 matplotlib = "*"
 gunicorn = "*"
 requests = "*"
 pillow = "*"
 raven = {version = "*", extras = ["flask"]}
-datatiles = {git = "https://github.com/brendan-ward/datatiles.git"}
+
 
 [dev-packages]
-pytest = "*"
 black = "==18.6b4"
+numpy = "*"
+pandas = "*"
+geopandas = "*"
+fiona = "*"
+pytest = "*"
+datatiles = {git = "https://github.com/brendan-ward/datatiles.git"}

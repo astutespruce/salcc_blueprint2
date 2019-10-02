@@ -31,6 +31,6 @@ yarn-error.log*
 *.mbtiles
 
 .env
-.env.production
+.env.*
 
 __pycache__

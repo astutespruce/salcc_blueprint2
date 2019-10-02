@@ -1,0 +1,17 @@
+node_modules
+.dockerignore
+Dockerfile
+npm-debug.log
+.git
+
+
+# ignore other root directories
+source_data
+public
+# src
+tools
+config
+deploy
+tiles
+scripts
+docs
